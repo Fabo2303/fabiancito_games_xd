@@ -1,120 +1,29 @@
-body {
-    background-color: rgba(100, 179, 195, 0.587);
+body{
+    background-color: rgba(156, 220, 52, 0.643);
 }
 
-.head {
+main{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
-.wins {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-h1 {
+h1{
     text-align: center;
-    font-size: 30px;
-    color: crimson
+    font-size: 10vh;
+    color: rgb(139, 7, 205);
 }
 
-#turno {
+a{
+    font-size: 4vh;
+    text-decoration: none;
     color: black;
 }
 
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+ol{
+    font-size: 4vh;
 }
 
-.tablero {
-    width: 70vw;
-    height: 70vw;
-    border-color: black;
-    border-style: solid;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    background-color: rgba(180, 133, 13, 0.912);
-}
-
-.fila {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 33%;
-}
-
-.bloque {
-    width: 33%;
-    height: 100%;
-    border-style: solid;
-    border-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.bloque::before {
-    content: "";
-    /* Agrega contenido falso */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: transparent;
-    z-index: -1;
-    /* Coloca el contenido falso detrás del contenido real */
-}
-
-.bloque:hover::before {
-    background-color: rgb(0, 0, 0);
-}
-
-.bloque.uno {
-    background-color: rgba(42, 226, 216, 0.477);
-}
-
-.bloque.dos {
-    background-color: rgba(42, 226, 216, 0.477);
-}
-
-.bloque.tres {
-    background-color: rgba(42, 226, 216, 0.477);
-}
-
-.circle {
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
-    height: 50%;
-    border-radius: 200px;
-}
-
-.circle i {
-    font-size: 300%;
-}
-
-@media(min-width: 866px) {
-    .tablero {
-        width: 600px;
-        height: 600px;
-    }
-}
-
-@media(max-width: 560px) {
-    .circle i {
-        font-size: 150%;
-    }
+a:hover{
+    color: aliceblue;
 }
