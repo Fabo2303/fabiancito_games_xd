@@ -5,16 +5,19 @@ var indicador = 0;
 function toggleCircle(id) {
     var posicion = id.split("x");
     var circle = document.getElementById(id);
+    var turno = document.getElementById('turno');
     if (circle.style.display === "none" || circle.style.display === "") {
         circle.style.display = "block";
         if (indicador == 0) {
             circle.style.backgroundColor = 'white';
             indicador++;
             matriz[posicion[0]][posicion[1]] = 3;
+            turno.textContent = "NEGRAS";
         } else {
             circle.style.backgroundColor = 'black';
             indicador--;
             matriz[posicion[0]][posicion[1]] = 5;
+            turno.textContent = "BLANCAS";
         }
     }
     verificarGanador();
@@ -93,6 +96,8 @@ function pivoteUnoXuno() {
 }
 
 function reset() {
+    var turno = document.getElementById('turno');
+    turno.textContent = "BLANCAS";
     matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     indicador = 0;
     for (var i = 0; i < 3; i++) {
