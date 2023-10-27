@@ -2,16 +2,16 @@ body {
     background-color: rgba(100, 179, 195, 0.587);
 }
 
-h1{
+h1 {
     font-size: 30px;
-    color:crimson
+    color: crimson
 }
 
-#turno{
+#turno {
     color: black;
 }
 
-main{
+main {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,7 +38,7 @@ main{
     height: 33%;
 }
 
-.bloque{
+.bloque {
     width: 33%;
     height: 100%;
     border-style: solid;
@@ -60,16 +60,29 @@ main{
     background-color: rgba(42, 226, 216, 0.477);
 }
 
-.circle{
+.circle {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 50%;
     height: 50%;
     border-radius: 200px;
 }
 
-@media(min-width: 866px){
-    .tablero{
+.circle i {
+    font-size: 300%;
+}
+
+@media(min-width: 866px) {
+    .tablero {
         width: 600px;
         height: 600px;
+    }
+}
+
+@media(max-width: 560px) {
+    .circle i {
+        font-size: 150%;
     }
 }

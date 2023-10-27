@@ -7,14 +7,16 @@ function toggleCircle(id) {
     var circle = document.getElementById(id);
     var turno = document.getElementById('turno');
     if (circle.style.display === "none" || circle.style.display === "") {
-        circle.style.display = "block";
+        circle.style.display = "flex";
         if (indicador == 0) {
             circle.style.backgroundColor = 'white';
+            circle.style.color = 'black';
             indicador++;
             matriz[posicion[0]][posicion[1]] = 3;
             turno.textContent = "NEGRAS";
         } else {
             circle.style.backgroundColor = 'black';
+            circle.style.color = 'white';
             indicador--;
             matriz[posicion[0]][posicion[1]] = 5;
             turno.textContent = "BLANCAS";
