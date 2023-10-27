@@ -9,6 +9,6 @@ Este repositorio tiene como propósito ofrecer un catálogo de varios juegos de 
     - **Imagen:** <br><img src="images/michi.png" alt="Descripción de la imagen" width="300px">
 
 
-    [¡Juega ahora!](https://fabo2303.github.io/fabiancito_games_xd/tresEnRaya.html)
+    [¡Juega ahora!](https://fabo2303.github.io/fabiancito_games_xd/tresEnRaya/tresEnRaya.html)
 
 Si tienes alguna sugerencia sobre algún juego que pueda agregar, no dudes en enviármela. ¡Estoy dispuesto a escuchar tus ideas!
