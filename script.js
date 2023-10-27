@@ -1,6 +1,5 @@
 var matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
-
-var indicador = 0;
+var indicador = 0, winWhite = 0, winBlack = 0;
 
 function toggleCircle(id) {
     var posicion = id.split("x");
@@ -35,6 +34,7 @@ function verificarGanador() {
             confirmButtonText: 'Sí',
         }).then((result) => {
             if (result.isConfirmed) {
+                winWhite++;
                 reset();
             }
         });
@@ -47,6 +47,7 @@ function verificarGanador() {
             confirmButtonText: 'Sí',
         }).then((result) => {
             if (result.isConfirmed) {
+                winBlack++;
                 reset();
             }
         });
@@ -100,6 +101,10 @@ function pivoteUnoXuno() {
 function reset() {
     var turno = document.getElementById('turno');
     turno.textContent = "BLANCAS";
+    var ww = document.getElementById('ww');
+    var wb = document.getElementById('wb');
+    ww.textContent = "Blancas: " + winWhite;
+    wb.textContent = "Negras: " + winBlack;
     matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     indicador = 0;
     for (var i = 0; i < 3; i++) {
