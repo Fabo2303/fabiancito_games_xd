@@ -21,8 +21,8 @@ main{
 }
 
 .tablero {
-    width: 60vw;
-    height: 60vw;
+    width: 70vw;
+    height: 70vw;
     border-color: black;
     border-style: solid;
     display: flex;
@@ -62,12 +62,12 @@ main{
 
 .circle{
     display: none;
-    width: 100px;
-    height: 100px;
+    width: 50%;
+    height: 50%;
     border-radius: 200px;
 }
 
-@media(min-width: 1000px){
+@media(min-width: 866px){
     .tablero{
         width: 600px;
         height: 600px;
