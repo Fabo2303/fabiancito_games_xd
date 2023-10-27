@@ -51,7 +51,7 @@ function verificarGanador() {
                 reset();
             }
         });
-    }else if(fila == -1){
+    } else if (fila == -1) {
         Swal.fire({
             title: 'Nadie gano',
             text: '¿Deseas reiniciar el juego?',
@@ -73,7 +73,7 @@ function pivoteUnoXuno() {
         for (var j = 0; j < 3; j++) {
             fichasFila += matriz[i][j];
             fichasColumna += matriz[j][i];
-            if(matriz[i][j] == 0){
+            if (matriz[i][j] == 0) {
                 numeroCeros++;
             }
         }
@@ -92,7 +92,7 @@ function pivoteUnoXuno() {
     if (fichasDiagonal2 == 9 || fichasDiagonal2 == 15) {
         return fichasDiagonal2;
     }
-    if(numeroCeros == 0){
+    if (numeroCeros == 0) {
         return -1;
     }
     return 0;
