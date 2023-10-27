@@ -1,0 +1,58 @@
+body {
+    background-color: rgba(0, 0, 0, 0.587);
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.tablero {
+    width: 600px;
+    height: 600px;
+    border-color: black;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgba(184, 135, 11, 0.912);
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    height: 200px;
+}
+
+.bloque{
+    width: 200px;
+    height: 200px;
+    border-style: solid;
+    border-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bloque.uno {
+    background-color: rgba(42, 226, 216, 0.477);
+}
+
+.bloque.dos {
+    background-color: rgba(42, 226, 216, 0.477);
+}
+
+.bloque.tres {
+    background-color: rgba(42, 226, 216, 0.477);
+}
+
+.circle{
+    display: none;
+    width: 100px;
+    height: 100px;
+    border-radius: 200px;
+}

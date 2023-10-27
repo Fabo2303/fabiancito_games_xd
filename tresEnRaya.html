@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Michi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <main>
+        <div class="tablero">
+            <div class="fila uno">
+                <div class="bloque uno" onclick="toggleCircle('0x0')">
+                    <div class="circle" id="0x0">
+
+                    </div>
+                </div>
+                <div class="bloque dos" onclick="toggleCircle('0x1')">
+                    <div class="circle" id="0x1">
+
+                    </div>
+                </div>
+                <div class="bloque tres" onclick="toggleCircle('0x2')">
+                    <div class="circle" id="0x2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="fila dos">
+                <div class="bloque uno" onclick="toggleCircle('1x0')">
+                    <div class="circle" id="1x0">
+
+                    </div>
+                </div>
+                <div class="bloque dos" onclick="toggleCircle('1x1')">
+                    <div class="circle" id="1x1">
+
+                    </div>
+                </div>
+                <div class="bloque tres" onclick="toggleCircle('1x2')">
+                    <div class="circle" id="1x2">
+
+                    </div>
+                </div>
+            </div>
+            <div class="fila tres">
+                <div class="bloque uno" onclick="toggleCircle('2x0')">
+                    <div class="circle" id="2x0">
+
+                    </div>
+                </div>
+                <div class="bloque dos" onclick="toggleCircle('2x1')">
+                    <div class="circle" id="2x1">
+
+                    </div>
+                </div>
+                <div class="bloque tres" onclick="toggleCircle('2x2')">
+                    <div class="circle" id="2x2">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
