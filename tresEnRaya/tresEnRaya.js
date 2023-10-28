@@ -1,6 +1,12 @@
 var matriz = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 var indicador = 0, winWhite = 0, winBlack = 0;
 
+function espera(ms) {
+    return new Promise(resolve => {
+        setTimeout(resolve, ms);
+    });
+}
+
 function toggleCircle(id) {
     var posicion = id.split("x");
     var circle = document.getElementById(id);
@@ -119,14 +125,16 @@ function reset() {
 }
 
 function bot() {
-    var i = Math.floor(Math.random() * 3);
-    var j = Math.floor(Math.random() * 3);
-    var jugada = toggleCircle(i + "x" + j);
-    if (matriz.some(fila => fila.includes(0))) {
-        while (jugada == -1) {
-            i = Math.floor(Math.random() * 3);
-            j = Math.floor(Math.random() * 3);
-            jugada = toggleCircle(i + "x" + j);
+    espera(1000).then(function () {
+        var i = Math.floor(Math.random() * 3);
+        var j = Math.floor(Math.random() * 3);
+        var jugada = toggleCircle(i + "x" + j);
+        if (matriz.some(fila => fila.includes(0))) {
+            while (jugada == -1) {
+                i = Math.floor(Math.random() * 3);
+                j = Math.floor(Math.random() * 3);
+                jugada = toggleCircle(i + "x" + j);
+            }
         }
-    }
+    });
 }
