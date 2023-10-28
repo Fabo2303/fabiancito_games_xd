@@ -13,6 +13,7 @@ function toggleCircle(id) {
             indicador++;
             matriz[posicion[0]][posicion[1]] = 3;
             turno.textContent = "NEGRAS";
+            bot();
         } else {
             circle.style.backgroundColor = 'black';
             circle.style.color = 'white';
@@ -20,6 +21,8 @@ function toggleCircle(id) {
             matriz[posicion[0]][posicion[1]] = 5;
             turno.textContent = "BLANCAS";
         }
+    } else {
+        return -1;
     }
     verificarGanador();
 }
@@ -111,6 +114,19 @@ function reset() {
         for (var j = 0; j < 3; j++) {
             var circle = document.getElementById(i + "x" + j);
             circle.style.display = "none";
+        }
+    }
+}
+
+function bot() {
+    var i = Math.floor(Math.random() * 3);
+    var j = Math.floor(Math.random() * 3);
+    var jugada = toggleCircle(i + "x" + j);
+    if (matriz.some(fila => fila.includes(0))) {
+        while (jugada == -1) {
+            i = Math.floor(Math.random() * 3);
+            j = Math.floor(Math.random() * 3);
+            jugada = toggleCircle(i + "x" + j);
         }
     }
 }
