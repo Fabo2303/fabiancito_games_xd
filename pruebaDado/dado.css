@@ -1,0 +1,99 @@
+body {
+    background-color: #7fffd4;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+.dado {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+}
+
+@keyframes rotate {
+    0% {
+        transform: var(--start-state) translateZ(125px);
+    }
+
+    50% {
+        transform: rotateX(53deg) rotateY(45deg) rotateZ(10deg);
+    }
+
+    100% {
+        transform: var(--end-state) translateX(15px);
+    }
+}
+
+.cara {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid black;
+    border-radius: 10px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cara::before {
+    content: "";
+    width: 20%;
+    height: 20%;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+}
+
+.uno {
+    transform: translateZ(50px);
+}
+
+.dos {
+    transform: translateY(50px) rotateX(90deg);
+}
+
+.dos::before {
+    background-color: transparent;
+    box-shadow: #000 -25px -25px 0px 0px, #000 25px 25px 0px 0px;
+}
+
+.tres {
+    transform: translateX(50px) rotateY(90deg);
+}
+
+.tres::before {
+    box-shadow: #000 -25px -25px 0px 0px, #000 25px 25px 0px 0px;
+}
+
+.cuatro {
+    transform: translateX(-50px) rotateY(90deg);
+}
+
+.cuatro::before {
+    background-color: transparent;
+    box-shadow: #000 -25px -25px 0px 0px, #000 25px 25px 0px 0px, #000 25px -25px 0px 0px, #000 -25px 25px 0px 0px;
+}
+
+.cinco {
+    transform: translateY(-50px) rotateX(90deg);
+}
+
+.cinco::before {
+    box-shadow: #000 -25px -25px 0px 0px, #000 25px 25px 0px 0px, #000 25px -25px 0px 0px, #000 -25px 25px 0px 0px;
+}
+
+.seis {
+    transform: translateZ(-50px);
+}
+
+.seis::before {
+    background-color: transparent;
+    box-shadow: #000 -25px -25px 0px 0px, #000 -25px 0px 0px 0px, #000 -25px 25px 0px 0px, #000 25px -25px 0px 0px, #000 25px 0px 0px 0px, #000 25px 25px 0px 0px;
+}
