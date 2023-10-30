@@ -2,6 +2,7 @@
 var tablero = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
 //Contadores
 var indicador = 0, winWhite = 0, winBlack = 0;
+var ganador = 0;
 
 //Generamos un tiempo de espera para que la reaccion del "bot" no sea inmediata
 function espera(ms) {
@@ -19,7 +20,7 @@ function toggleCircle(id) {
     //Obtenemos el h1 que indica el jugador en turno
     var turno = document.getElementById('turno');
     //Si sigue vacio el cuadro puede realizar todo lo demas;
-    if (circle.style.display === "") {
+    if (circle.style.display === "" || circle.style.display === "none") {
         //Se asigna flex para que aparezca el circulo
         circle.style.display = "flex";
         // Turno de las BLANCAS
@@ -34,8 +35,6 @@ function toggleCircle(id) {
             tablero[posicion[0]][posicion[1]] = 3;
             //Actualizamos el h1 en el turno de NEGRAS
             turno.textContent = "NEGRAS";
-            //LLamamos al bot para que realice su turno
-            bot();
         } else { //Turno de las NEGRAS
             //Color del circulo : NEGRO
             circle.style.backgroundColor = 'black';
@@ -52,12 +51,16 @@ function toggleCircle(id) {
         return -1;
     }
     verificarGanador(); //En cada turno se verifica al ganador
+    
+    //LLamamos al bot para que realice su turno
+    if(ganador != 9 && indicador == 1)
+        bot();
 }
 
 
 function verificarGanador() {
     //Llamamos a la verificacion de las filas, columnas y 
-    var ganador = verificarTablero();
+    ganador = verificarTablero();
     //Si ganador = 9 entonces ganaron blancas
     if (ganador == 9) {
         Swal.fire({
