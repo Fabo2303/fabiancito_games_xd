@@ -1,0 +1,44 @@
+{
+    "games": [
+        {
+            "name": "Tic Tac Toe",
+            "img": "tictactoe.jpg",
+            "url": "tictactoe"
+        }, 
+        {
+            "name": "Connect Four",
+            "img": "connectfour.jpg",
+            "url": "url"
+        },
+        {
+            "name": "Checkers",
+            "img": "checkers.jpg",
+            "url": "url"
+        },
+        {
+            "name": "Chess",
+            "img": "chess.jpg",
+            "url": "url"
+        },
+        {
+            "name": "Go",
+            "img": "go.jpg",
+            "url": "url"
+        },
+        {
+            "name": "Othello",
+            "img": "othello.jpg",
+            "url": "url"
+        },
+        {
+            "name": "Battleship",
+            "img": "battleship.jpg",
+            "url": "url"
+        },
+        {
+            "name": "Risk",
+            "img": "risk.jpg",
+            "url": "url"
+        }
+    ]
+}

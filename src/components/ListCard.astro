@@ -1,0 +1,12 @@
+---
+import Card from "./Card.astro"
+import {games} from "../data/data.json"
+---
+
+<div class="">
+    {
+        games.map((game) => {
+            return <Card title={game.name} href={game.url} img={game.img} />
+        })
+    }
+</div>
